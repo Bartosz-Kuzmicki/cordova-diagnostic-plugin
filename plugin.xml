@@ -108,19 +108,19 @@
             <framework src="Photos.framework" />
             <framework src="AVFoundation.framework" />
             
+            <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+                <string>Withlocals allows you to interact with others. Choose OK, so the app can use the camera and take your profile picture.</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+                <string>Withlocals allows you to interact with others. Choose OK, so the app can use the camera and take your profile picture.</string>
+            </config-file>
+            
         </config-file>
 
         <js-module src="www/ios/diagnostic.camera.js" name="Diagnostic_Camera">
             <merges target="cordova.plugins.diagnostic.camera" />
         </js-module>
-        
-        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-            <string>Withlocals allows you to interact with others. Choose OK, so the app can use the camera and take your profile picture.</string>
-        </config-file>
-
-        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-            <string>Withlocals allows you to interact with others. Choose OK, so the app can use the camera and take your profile picture.</string>
-        </config-file>
 
         <header-file src="src/ios/Diagnostic_Camera.h" />
         <source-file src="src/ios/Diagnostic_Camera.m" />
